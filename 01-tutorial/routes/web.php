@@ -22,3 +22,7 @@ Route::get('product/{product}', 'ProductController@show')->name('product.show');
 Route::get('product/{product}/edit', 'ProductController@edit')->name('product.edit');
 Route::match(['put', 'patch'], 'product/{product}', 'ProductController@update')->name('product.update');
 Route::delete('product/{product}', 'ProductController@destroy')->name('product.destroy');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
